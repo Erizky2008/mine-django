@@ -1,0 +1,14 @@
+{% extends 'mimi/main.html' %}
+{% block content %}
+
+<h2>Register</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Register">
+</form>
+
+<p>Login? <a href="{% url 'login' %}">Login</a></p>
+
+{% endblock content %}

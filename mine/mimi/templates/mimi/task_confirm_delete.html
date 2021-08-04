@@ -1,0 +1,11 @@
+{% extends 'mimi/main.html' %}
+{% block content %}
+
+<a href="{% url 'tasks' %}">Back</a>
+<form method="POST">
+    {% csrf_token %}
+    <p>Delete this task? "{{task}}"</p>
+    <input type="submit" value="Delete" />
+</form>
+
+{% endblock content %}
